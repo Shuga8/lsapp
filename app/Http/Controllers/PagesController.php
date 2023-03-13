@@ -8,14 +8,26 @@ class PagesController extends Controller
 {
 
     public function index(){
-        return view('pages.index');
+
+        $data = [
+            'title' => 'Laravel Tutorial'
+        ];
+        return view('pages.index')->with($data);
     }
 
     public function about(){
-        return view('pages.about');
+        $data = [
+            'title' => 'About'
+        ];
+        return view('pages.about')->with($data);
     }
 
     public function services(){
-        return view('pages.services');
+        $data = [
+            'title' => 'Services',
+            'services' => ['Web Design', 'Programming', 'SEO']
+        ];
+
+        return view('pages.index')->with($data);
     }
 }
