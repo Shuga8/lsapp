@@ -28,6 +28,6 @@ class PagesController extends Controller
             'services' => ['Web Design', 'Programming', 'SEO']
         ];
 
-        return view('pages.index')->with($data);
+        return view('pages.services')->with($data);
     }
 }
